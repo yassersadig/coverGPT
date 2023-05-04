@@ -1,0 +1,16 @@
+<form action="/result" method="post">
+  {% csrf_token %}
+  <label for="title">Jobe Title</label>
+  <input id="title" name="title" type="text" />
+  <br /><br />
+  <label for="company">Company Name</label>
+  <input id="company" name="company" type="text" />
+  <br /><br />
+  <label for="resume">Resume</label>
+  <input id="resume" name="resume" type="text" />
+  <br /><br />
+  <label for="job">Job Description</label>
+  <input id="job" name="job" type="text" />
+  <br /><br />
+  <input type="submit" value="Submit" />
+</form>
