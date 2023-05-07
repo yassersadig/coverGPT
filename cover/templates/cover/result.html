@@ -1,1 +1,4 @@
-<h1>the result is: {% title %}</h1>
+{% extends "base.html" %} {% block content %}
+<h1 class="text-center">the result is:</h1>
+<h2 class="text-center">{{ result }}</h2>
+{% endblock content%}

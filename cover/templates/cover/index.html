@@ -1,16 +1,44 @@
+{% extends "base.html" %} {% block content %}
+<h1 class="text-center">Job Details</h1>
 <form action="/result" method="post">
   {% csrf_token %}
-  <label for="title">Jobe Title</label>
-  <input id="title" name="title" type="text" />
-  <br /><br />
-  <label for="company">Company Name</label>
-  <input id="company" name="company" type="text" />
-  <br /><br />
-  <label for="resume">Resume</label>
-  <input id="resume" name="resume" type="text" />
-  <br /><br />
-  <label for="job">Job Description</label>
-  <input id="job" name="job" type="text" />
-  <br /><br />
-  <input type="submit" value="Submit" />
+  <div class="form-group">
+    <input
+      id="title"
+      name="title"
+      type="text"
+      class="form-control"
+      placeholder="Job Title"
+    />
+    <br />
+    <input
+      id="company"
+      name="company"
+      type="text"
+      class="form-control"
+      placeholder="Company Name"
+    />
+    <br />
+    <input
+      id="resume"
+      name="resume"
+      type="text"
+      class="form-control"
+      placeholder="Resume"
+    />
+    <br />
+    <input
+      id="job"
+      name="job"
+      type="text"
+      class="form-control"
+      placeholder="Job Description"
+    />
+    <br />
+  </div>
+  <div class="form-group text-center">
+    <input type="submit" value="Submit" class="btn btn-success" />
+  </div>
 </form>
+
+{% endblock content %}
