@@ -10,11 +10,19 @@
       href="{% static 'favicon.png' %}"
     />
 
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}" />
+    <script src="{% static 'main.js'%}" defer></script>
+
     {% load django_bootstrap5 %} {% bootstrap_css %} {% bootstrap_javascript %}
     {% bootstrap_messages %}
     <title>{% block title %} CoverGPT {% endblock %}</title>
   </head>
   <body>
     <div class="container">{% block content %} {% endblock content %}</div>
+    <div id="spinner">
+      <div class="spinner-border" role="status"></div>
+      <div class="mt-2">Loading...</div>
+      <div class="mt-1">ChatGPT is as slow as a sloth on a Sunday.</div>
+    </div>
   </body>
 </html>

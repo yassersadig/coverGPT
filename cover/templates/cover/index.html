@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <h1 class="text-center">Job Details</h1>
-<form action="/result" method="post">
+<form action="/result" method="post" id="job-form">
   {% csrf_token %}
   <div class="form-group">
     <input
