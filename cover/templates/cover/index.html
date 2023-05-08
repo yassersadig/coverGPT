@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 <h1 class="text-center mt-5 mb-3">Job Details</h1>
-<form action="/result" method="post" id="job-form">
+<form action="/result" method="post" id="job-form" enctype="multipart/form-data">
   {% csrf_token %}
   <div class="form-group">
       <input 
@@ -19,12 +19,13 @@
       placeholder="Company Name"
     />
     <br />
+    <label for="resume" class="form-label">Resume</label>
     <input
       id="resume"
       name="resume"
-      type="text"
+      type="file"
       class="form-control"
-      placeholder="Resume"
+      accept="application/pdf"
     />
     <br />
     <input
