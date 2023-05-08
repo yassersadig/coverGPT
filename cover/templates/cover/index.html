@@ -1,9 +1,9 @@
 {% extends "base.html" %} {% block content %}
-<h1 class="text-center">Job Details</h1>
+<h1 class="text-center mt-5 mb-3">Job Details</h1>
 <form action="/result" method="post" id="job-form">
   {% csrf_token %}
   <div class="form-group">
-    <input
+      <input 
       id="title"
       name="title"
       type="text"
@@ -34,9 +34,8 @@
       class="form-control"
       placeholder="Job Description"
     />
-    <br />
   </div>
-  <div class="form-group text-center">
+  <div class="form-group text-center mt-3">
     <input type="submit" value="Submit" class="btn btn-success" />
   </div>
 </form>
